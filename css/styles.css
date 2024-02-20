@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Protest Riot", sans-serif;
+
+}
+.navlist{
+    position: absolute;
+    display: flex;
+    list-style: none;
+    right: 20px;
+    top: 20px;
+}
+.navlist button{
+    margin: 10px;
+    box-shadow: 6px 6px 16px -4px rgba(0,0,0,0.75);
+}
+/*==================================== background ======================================================== */
+.container{
+    width: 100%;
+    height: 100vh;
+    background: rgb(226,214,245);
+    background: linear-gradient(201deg, rgba(226,214,245,1) 0%, rgba(147,112,232,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/*==================================== background ======================================================== */
+
+/*===================================== App container===================================================== */
+.todoContainer{
+    background-color: #9C7CE9;
+    width: 100%;
+    max-width: 540px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+/* +++++++++++++++++========================add task section=============+++++++++++++++++++++++++++ */
+.addtaskcontainer{
+    display: flex;
+    background-color: #c6b1f067;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+}
+input{
+    padding-left: 30px;
+    border-radius: 20px;
+    border: none;
+    flex: 1;
+    background: transparent;
+    outline: none;
+    font-size: large;
+}
+button{
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #9C7CE9;
+    font-size: larger;
+    cursor: pointer;
+}
+/* +++++++++++++++++========================add task section=============+++++++++++++++++++++++++++ */
+
+/* +++++++++++++++++======================== task list section=============+++++++++++++++++++++++++++ */
+.todotaskscontainer{
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 20px 20px ;
+    padding: 20px;
+
+}
+.titlesection{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#listcontainer{
+    background-color: #9d7ce975;
+    border-radius: 20px;
+    padding: 5px;
+}
+#listcontainer li{
+    list-style: none;
+    font-size: large;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    
+}
+#listcontainer li::before{
+    background-image: url(../img/unchecked.png);
+    position: absolute;
+    content:'';
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    top: 10px;
+    left: 10px;
+
+}
+#deletebtn{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+#deletebtn:hover{
+    color: #555;
+}
+
+#listcontainer li.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+#listcontainer li.checked::before{
+    background-image: url(../img/checked.png);
+}
+/* +++++++++++++++++======================== task list section=============+++++++++++++++++++++++++++ */
+
+
+/*===================================== App container===================================================== */
